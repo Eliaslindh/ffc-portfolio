@@ -56,6 +56,7 @@ a:hover::before {
 
   section {
       height: 100vh;
+      width: 100%;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -129,7 +130,7 @@ h1:hover::before {
     width: 700px;
     height: 700px;
   opacity: 1;
-  filter: url(#wavy) blur(1px);
+  filter: url(#wavy) blur(1.5px);
   z-index: -1;
   }
   
@@ -143,7 +144,7 @@ h1:hover::before {
     border: 10px solid white;
     border-radius: 100%;
     box-shadow: 0 0 50px #0f0, inset 0 0 40px #0f0;
-  -webkit-box-reflect: below 10px linear-gradient(transparent,transparent,#0002);
+  -webkit-box-reflect: below 10px linear-gradient(transparent,transparent,rgba(202, 181, 181, 0.133));
   animation: animate  5s linear infinite ;
   
   }
@@ -156,7 +157,7 @@ h1:hover::before {
     bottom: 100px;
     border: 10px solid rgb(241, 42, 75);
     border-radius: 100%;
-    box-shadow: 0 0 50px rgb(241, 42, 75), inset 0 0 40px rgb(241, 42, 75);
+    box-shadow: 0 0 50px rgb(255, 0, 43), inset 0 0 40px rgb(255, 0, 43);
   
   }
   .circle:nth-child(2)::before{
@@ -198,4 +199,11 @@ h1:hover::before {
   svg{
     width: 0;
     height: 0;
+  }
+
+
+  @media (max-width:500px) {
+    .circle {
+      display: none;
+    }
   }
