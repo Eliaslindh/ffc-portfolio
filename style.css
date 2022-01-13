@@ -185,7 +185,7 @@ section .clouds-animation{
 
 .card{
     color: white;
-    background-image: url(pic.png);
+    background-image: url(imagecard/pic.png);
     background-size: cover;
     background-position: center;
     max-width: 35ch;

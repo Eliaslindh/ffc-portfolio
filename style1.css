@@ -5,7 +5,9 @@ html {
 body {
     background-color: black;
     height: 100vh;
-  
+  display: flex;
+  justify-content: center;
+ 
 }
 
 
@@ -14,7 +16,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 800px;
+    height: 700px;
 }
 
 .home a {
@@ -117,4 +119,83 @@ h1:hover::before {
     background-color: rgb(241, 42, 75);
     border-radius: 20px;
     border: 6px solid transparent;
+  }
+
+
+  .circle{
+    position:absolute;
+    display: flex;
+    justify-content: center;
+    width: 700px;
+    height: 700px;
+  opacity: 1;
+  filter: url(#wavy) blur(1px);
+  z-index: -1;
+  }
+  
+  .circle::before{
+    content: '';
+    position: absolute;
+    top:100px;
+    left: 100px;
+    right: 250px;
+    bottom: 200px;
+    border: 10px solid white;
+    border-radius: 100%;
+    box-shadow: 0 0 50px #0f0, inset 0 0 40px #0f0;
+  -webkit-box-reflect: below 10px linear-gradient(transparent,transparent,#0002);
+  animation: animate  5s linear infinite ;
+  
+  }
+  .circle::after{
+    content: '';
+    position: absolute;
+    top:100px;
+    left: 100px;
+    right: 100px;
+    bottom: 100px;
+    border: 10px solid rgb(241, 42, 75);
+    border-radius: 100%;
+    box-shadow: 0 0 50px rgb(241, 42, 75), inset 0 0 40px rgb(241, 42, 75);
+  
+  }
+  .circle:nth-child(2)::before{
+    animation-delay: -2,5s;
+  }
+  @keyframes animate{
+    0%
+  {
+    box-shadow: 0 0 50px #fff inset 0 0 50px #0f0;
+    filter:  hue-rotate(0deg);
+   }
+   20%
+   {
+     box-shadow: 0 0 60px #0f0 inset 0 0 60px #0f0;
+   
+    }
+    40%
+   {
+     box-shadow: 0 0 40px #0f0 inset 0 0 40px #0f0;
+   
+    }
+    60%
+   {
+     box-shadow: 0 0 80px #0f0 inset 0 0 80px #0f0;
+   
+    }
+    80%
+   {
+     box-shadow: 0 0 100px #0f0 inset 0 0 100px #0f0;
+   
+    }
+   100%
+   {
+     box-shadow: 0 0 50px #0f0 inset 0 0 50px #0f0;
+     filter:  hue-rotate(360deg);
+    }
+  }
+  
+  svg{
+    width: 0;
+    height: 0;
   }
