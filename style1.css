@@ -1,7 +1,11 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
     background-color: black;
     height: 100vh;
-    scroll-behavior: smooth;
+  
 }
 
 
